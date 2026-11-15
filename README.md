@@ -70,7 +70,7 @@ CareCircle establishes a unified, shared healthcare ecosystem where:
 | **Low Stock Alerts** | Automatic inventory monitoring triggering alerts when stock reaches configured thresholds. | ✅ Fully Implemented |
 | **Doctor Appointment Management** | Book, view, and cancel consultations with doctors, specializations, hospitals, and locations. | ✅ Fully Implemented |
 | **Family & Caregiver Collaboration** | Connect team members, manage granular permissions, and issue secure 6-digit passcodes. | ✅ Fully Implemented |
-| **AI Care Assistant (Gemini API)** | Server-side Gemini AI integration providing routine summaries and assistant Q&A. | ✅ Fully Implemented |
+| **AI Care Assistant (Gemini AI)** | Server-side Gemini AI integration providing routine summaries and assistant Q&A. | ✅ Fully Implemented |
 | **Smart Adherence Insights** | AI-powered analysis of adherence history and missed-dose patterns. | ✅ Fully Implemented |
 | **Intelligent Care Handover** | Shift note summarization for incoming nursing and family care teams. | ✅ Fully Implemented |
 | **Email Reminder Simulator** | Backend Express endpoint simulating resilient email dispatches with delivery IDs. | ✅ Fully Implemented |
@@ -91,37 +91,7 @@ CareCircle establishes a unified, shared healthcare ecosystem where:
 
 ## 🏛️ 6. System Architecture
 
-CareCircle is architected as a full-stack React single-page application powered by an Express backend server running Vite middleware.
-
-```mermaid
-flowchart TD
-    subgraph Client Layer [Frontend SPA - React 19 / TypeScript / Tailwind CSS]
-        UI[User Interface & Pages]
-        A11y[Accessibility Engine (A+, High Contrast, TTS)]
-        State[React Context & State Management]
-    end
-
-    subgraph Server Layer [Node.js / Express Server]
-        API[API Router /api/*]
-        EmailSim[Email Reminder Dispatcher Simulator]
-    end
-
-    subgraph AI Engine [Google GenAI SDK]
-        Gemini[Gemini 4 Hydrogen / Flash Lite]
-        Assist[AI Care Assistant & Insights]
-    end
-
-    subgraph Data & Storage [Persistent & Local State]
-        LocalStorage[LocalStorage / Session Store]
-    end
-
-    UI --> State
-    State --> API
-    API --> EmailSim
-    API --> Gemini
-    Gemini --> Assist
-    State --> LocalStorage
-```
+CareCircle is architected as a full-stack React single-page application powered by an Express backend server running Vite middleware. The platform integrates React 19, TypeScript, and Tailwind CSS on the frontend with a secure Express API routing layer, Google GenAI SDK for AI intelligence, and robust session and state management.
 
 ---
 
