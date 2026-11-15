@@ -1,0 +1,7 @@
+{
+  "name": "CareCircle - Elderly Care & Medication Management Platform",
+  "description": "Smart, interconnected healthcare management platform helping elderly individuals manage daily medications, doctor appointments, and healthcare routines with AI assistance and family collaboration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
